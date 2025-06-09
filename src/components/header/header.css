@@ -1,0 +1,59 @@
+/* Reset and layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Header Bar */
+.header {
+  display: flex; /* ✅ fixed */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: white;
+  height: 80px; /* ✅ reduced height */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ✅ even spacing between links */
+}
+
+/* Navigation links */
+.nav-link {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 16px; /* ✅ appropriate size */
+  padding: 8px 12px;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Button inside nav */
+.nav-link button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-link button:hover {
+  background-color: darkgreen;
+}
