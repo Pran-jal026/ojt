@@ -14,10 +14,10 @@ const CoursesPage = () => {
         Our curriculum is regularly updated to reflect industry trends and academic advancements.
       </p>
 
-      <h2 className="text-xl font-bold mb-2">Discover Campus Life</h2>
+      <h1 className="text-xl font-bold mb-2">Discover Campus Life</h1>
       <div className="mb-6">
-        <video controls className="rounded-md w-full shadow">
-          <source src="clg.mp4" type="video/mp4" />
+        <video controls autoPlay muted loop className="rounded-md w-full shadow">
+          <source src="/videos/clg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <p className="text-center text-sm mt-2 italic">Get a glimpse of the vibrant academic and social life at Vivekanand College.</p>
@@ -102,9 +102,9 @@ const CoursesPage = () => {
       </p>
 
       <p className="mb-2">Have questions about a specific course?</p>
-      <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
+       <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
         Inquire About Courses
-      </button>
+      </button> 
     </div>
   );
 }

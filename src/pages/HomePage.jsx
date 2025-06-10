@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import Header from '../components/header/Header';
 
@@ -20,7 +21,10 @@ const Home = () => {
             />
             <div className="header-overlay">
               <h1>Welcome to Vivekanand College!</h1>
-              <a href="Admission" className="apply-button">Apply Now!</a>
+              {/* <a href="/Admission" className="apply-button">Apply Now!</a> */}
+              <Link to="/AdmissionPage">
+                  <button className="apply-button">Apply Now</button>
+              </Link>
             </div>
           </div>
 
@@ -69,7 +73,8 @@ const Home = () => {
           <p className="caption">
               Ready to explore our courses?     
           </p>
-          <button className="explore-courses-btn"> Explore Courses </button>
+          {/* <button className="explore-courses-btn"> Explore Courses </button> */}
+          <Link to= "/CoursesPage" className="explore-courses-btn">Explore Courses</Link>
         </div>
       </div>
     </div>
