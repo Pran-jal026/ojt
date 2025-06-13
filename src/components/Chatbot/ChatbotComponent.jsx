@@ -118,7 +118,7 @@ const ChatbotComponent = () => {
     const aiResponseText = await getAIResponse(userMessageText);
     const botResponse = { text: aiResponseText, sender: "bot" };
     setMessages((prevMessages) => [...prevMessages, botResponse]);
-  };
+  }; 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -211,7 +211,7 @@ const ChatbotComponent = () => {
             </div>
           </>
         )}
-      </div>
+      </div> 
     </div>
   );
 };
