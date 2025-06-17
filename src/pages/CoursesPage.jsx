@@ -1,112 +1,119 @@
-
 import React from 'react';
 import Header from '../components/header/Header';
+import { Link } from 'react-router-dom';
 import './Courses.css';
 
 const CoursesPage = () => {
   return (
-    <div className="p-4 max-w-xl mx-auto font-serif">
-      <Header/>
-      <h1 className="text-2xl font-bold text-center text-blue-800 mb-2">Our Academic Programs</h1>
-      <p className="text-center mb-6">
-        Vivekanand College offers a comprehensive range of undergraduate and postgraduate programs
-        designed to equip students with the knowledge and skills demanded by today's dynamic global landscape.
-        Our curriculum is regularly updated to reflect industry trends and academic advancements.
-      </p>
+    <div className="courses-wrapper">
+      <Header />
 
-      <h1 className="text-xl font-bold mb-2">Discover Campus Life</h1>
-      <div className="mb-6">
-        <video controls autoPlay muted loop className="rounded-md w-full shadow">
-          <source src="/videos/clg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p className="text-center text-sm mt-2 italic">Get a glimpse of the vibrant academic and social life at Vivekanand College.</p>
+      <div className="courses-container">
+        <h1 className="title">Our Academic Programs</h1>
+        <p className="subtitle">
+          Vivekanand College offers a comprehensive range of undergraduate and postgraduate programs
+          designed to equip students with the knowledge and skills demanded by today's dynamic global landscape.
+          Our curriculum is regularly updated to reflect industry trends and academic advancements.
+        </p>
+
+        <h2 className="section-title">Discover Campus Life</h2>
+        <div className="video-section">
+          <video controls muted loop className="video">
+            <source src="/videos/clg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="video-caption">Get a glimpse of the vibrant academic and social life at Vivekanand College.</p>
+        </div>
+
+        <h2 className="section-title">Undergraduate Programs (UG)</h2>
+        <ul className="list">
+          <li>
+            <strong>B.Sc.</strong>
+            <ul>
+              <li>Computer Science</li>
+              <li>Information Technology</li>
+              <li>Biotechnology</li>
+            </ul>
+          </li>
+          <li>
+            <strong>B.Com</strong>
+            <ul>
+              <li>Accounting & Finance</li>
+              <li>Banking & Insurance</li>
+            </ul>
+          </li>
+          <li>
+            <strong>B.A.</strong>
+            <ul>
+              <li>English Literature</li>
+              <li>Psychology</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2 className="section-title">Postgraduate Programs (PG)</h2>
+        <ul className="list">
+          <li>
+            <strong>M.Sc.</strong>
+            <ul>
+              <li>Computer Science</li>
+              <li>Information Technology</li>
+            </ul>
+          </li>
+          <li><strong>M.Com</strong></li>
+          <li><strong>M.A.</strong></li>
+        </ul>
+
+        <h2 className="section-title">Program Details & Fee Structure</h2>
+        <table className="fee-table">
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Course</th>
+              <th>Duration</th>
+              <th>Fee (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UG</td>
+              <td>B.Sc. CS</td>
+              <td>3 Years</td>
+              <td>85,000</td>
+            </tr>
+            <tr>
+              <td>UG</td>
+              <td>B.Com A&F</td>
+              <td>3 Years</td>
+              <td>70,000</td>
+            </tr>
+            <tr>
+              <td>PG</td>
+              <td>M.Sc. IT</td>
+              <td>2 Years</td>
+              <td>95,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 className="section-title">Specialized & Vocational Courses</h2>
+        <p className="paragraph">
+          In addition to traditional degree programs, we offer various certificate and 
+          diploma courses in areas like Digital Marketing, Web Development, 
+          Data Analytics, and Soft Skills Development, providing specialized training 
+          for career enhancement.
+        </p>
+
+        <p className="paragraph">Have questions about a course?</p>
+
+        <Link to="/contact" className="inquire-btn-link">
+          <button className="inquire-btn">
+            Inquire About Courses
+          </button>
+        </Link>
       </div>
-
-      <h2 className="text-xl font-bold mb-2">Undergraduate Programs (UG)</h2>
-      <ul className="mb-4 list-disc list-inside">
-        <li>
-          <strong>Bachelor of Science (B.Sc.)</strong>
-          <ul className="list-disc ml-5">
-            <li>Computer Science (3 years)</li>
-            <li>Information Technology (3 years)</li>
-            <li>Biotechnology (3 years)</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Bachelor of Commerce (B.Com)</strong>
-          <ul className="list-disc ml-5">
-            <li>Accounting & Finance (3 years)</li>
-            <li>Banking & Insurance (3 years)</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Bachelor of Arts (B.A.)</strong>
-          <ul className="list-disc ml-5">
-            <li>English Literature (3 years)</li>
-            <li>Psychology (3 years)</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h2 className="text-xl font-bold mb-2">Postgraduate Programs (PG)</h2>
-      <ul className="mb-4 list-disc list-inside">
-        <li>
-          <strong>Master of Science (M.Sc.)</strong>
-          <ul className="list-disc ml-5">
-            <li>Computer Science (2 years)</li>
-            <li>Information Technology (2 years)</li>
-          </ul>
-        </li>
-        <li><strong>Master of Commerce (M.Com)</strong> (2 years)</li>
-        <li><strong>Master of Arts (M.A.)</strong> (2 years)</li>
-      </ul>
-
-      <h2 className="text-xl font-bold mb-2">Program Details & Fee Structure (Annual)</h2>
-      <table className="w-full table-auto border border-gray-400 mb-6">
-        <thead className="bg-gray-200">
-          <tr>
-            <th className="border p-2">Program Type</th>
-            <th className="border p-2">Course Name</th>
-            <th className="border p-2">Duration</th>
-            <th className="border p-2">Annual Fee (INR)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="border p-2">UG</td>
-            <td className="border p-2">B.Sc. Computer Science</td>
-            <td className="border p-2">3 Years</td>
-            <td className="border p-2">₹ 85,000</td>
-          </tr>
-          <tr>
-            <td className="border p-2">UG</td>
-            <td className="border p-2">B.Com, Accounting & Finance</td>
-            <td className="border p-2">3 Years</td>
-            <td className="border p-2">₹ 70,000</td>
-          </tr>
-          <tr>
-            <td className="border p-2">PG</td>
-            <td className="border p-2">M.Sc. Information Technology</td>
-            <td className="border p-2">2 Years</td>
-            <td className="border p-2">₹ 95,000</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2 className="text-xl font-bold mb-2">Specialized & Vocational Courses</h2>
-      <p className="mb-4">
-        In addition to traditional degree programs, we offer various certificate and diploma courses
-        in areas like Digital Marketing, Web Development, Data Analytics, and Soft Skills Development,
-        providing specialized training for career enhancement.
-      </p>
-
-      <p className="mb-2">Have questions about a specific course?</p>
-       <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
-        Inquire About Courses
-      </button> 
     </div>
   );
-}
+};
 
 export default CoursesPage;

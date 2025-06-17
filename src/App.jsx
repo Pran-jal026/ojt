@@ -36,11 +36,11 @@ const App=() => {
           
             <Routes>
                 <Route path='/' element={<Home/>} /> 
-                <Route path='/AboutPage' element={<AboutPage/>} />
-                <Route path='/AdmissionPage' element={<AdmissionsPage/>} />
-                <Route  path='/ContactPage' element={<ContactPage/>} />
-                <Route path='/CoursesPage' element={<CoursesPage/>} />
-                <Route path='/NotFoundPage' element={<NotFoundPage/>}/> 
+                <Route path='/about' element={<AboutPage/>} />
+                <Route path='/admissions' element={<AdmissionsPage/>} />
+                <Route  path='/contact' element={<ContactPage/>} />
+                <Route path='/courses' element={<CoursesPage/>} />
+                <Route path="*" element={<NotFoundPage/>}/> 
               </Routes>
               <ChatbotComponent/>
         </BrowserRouter>  

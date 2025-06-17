@@ -1,46 +1,35 @@
-.contact-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 16px;
-  font-family: Georgia, serif;
-  background-color: #fefefe;
+ body {
+  margin: 0;
+  padding: 0;
+} 
+
+.contact-page {
+  background: linear-gradient(to right, #1e90ff, #00bfff);
+  min-height: 100vh; 
 }
 
-.contact-title {
-  text-align: center;
-  color: #1e40af; /* blue */
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 12px;
+.contact-header-wrapper {
+  position: fixed;
+  top: 0; 
+  width: 100%;
+  z-index: 1000;
 }
 
-.contact-subtext {
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 20px;
+.contact-content {
+  margin-top: 50px;
+  background: #f8f9fa;
+  padding: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.contact-section {
-  border-top: 1px solid #ccc;
-  padding-top: 16px;
-  margin-top: 16px;
+.contact-content h2 {
+  text-align: left;
 }
 
-.contact-section h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #1f2937;
-}
-
-.contact-section p {
-  margin-bottom: 10px;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.map-link {
-  color: #1d4ed8;
-  text-decoration: underline;
-  font-weight: 500;
+.contact-content p {
+    text-align: left;
 }

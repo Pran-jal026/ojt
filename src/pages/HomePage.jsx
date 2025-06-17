@@ -21,10 +21,10 @@ const Home = () => {
             />
             <div className="header-overlay">
               <h1>Welcome to Vivekanand College!</h1>
-              {/* <a href="/Admission" className="apply-button">Apply Now!</a> */}
-              <Link to="/AdmissionPage">
+              {/* { <a href="/admission" className="apply-button">Apply Now!</a> } */}
+              { <Link to="/admissions">
                   <button className="apply-button">Apply Now</button>
-              </Link>
+              </Link> }
             </div>
           </div>
 
@@ -54,17 +54,10 @@ const Home = () => {
           
          {/* Campus Section */}
           <h2>Campus Life & Facilities</h2>
-          <img
-            src="/images/img2.jpg"
-            alt="Campus Life"
-            className="campus-img"
-          />
-
-          <img
-            src="/images/img3.jpg"
-            alt="Campus Life"
-            className="campus-img"
-          />
+           <div className= "campus-images">
+             <img src="/images/img2.jpg" alt="Campus View 1" className="campus-img" />
+             <img src="/images/img3.jpg" alt="Campus View 2" className="campus-img"/>
+           </div>
           <p className="caption">
                   Explore our vibrant campus and state-of-the-art facilities 
                   designed to enhance your learning experience and personal growth.
@@ -74,7 +67,7 @@ const Home = () => {
               Ready to explore our courses?     
           </p>
           {/* <button className="explore-courses-btn"> Explore Courses </button> */}
-          <Link to= "/CoursesPage" className="explore-courses-btn">Explore Courses</Link>
+          <Link to= "/courses" className="explore-courses-btn">Explore Courses</Link>
         </div>
       </div>
     </div>
