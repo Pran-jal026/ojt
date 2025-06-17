@@ -21,6 +21,7 @@ const Home = () => {
             />
             <div className="header-overlay">
               <h1>Welcome to Vivekanand College!</h1>
+              <p>Your journey to excellence starts here.</p>
               {/* { <a href="/admission" className="apply-button">Apply Now!</a> } */}
               { <Link to="/admissions">
                   <button className="apply-button">Apply Now</button>
